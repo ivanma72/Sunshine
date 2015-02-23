@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.sunshine.app;
+package com.example.ivanma.sunshine.app;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -25,7 +25,7 @@ import android.text.format.Time;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 
-import com.example.android.sunshine.app.data.WeatherContract.WeatherEntry;
+import com.example.ivanma.sunshine.app.data.WeatherContract.WeatherEntry;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -78,7 +78,7 @@ public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
         SharedPreferences sharedPrefs =
                 PreferenceManager.getDefaultSharedPreferences(mContext);
         String unitType = sharedPrefs.getString(
-                mContext.getString(R.string.pref_units_key),
+                mContext.getString(R.string.pref_unit_key),
                 mContext.getString(R.string.pref_units_metric));
 
         if (unitType.equals(mContext.getString(R.string.pref_units_imperial))) {
